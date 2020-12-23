@@ -3,15 +3,9 @@ import Nav from 'react-bootstrap/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Link from 'next/link';
 
-function refreshPage() {
-  window.location.reload(false);
-}
-
 const NavbarReact = () => {
   return (
     <div>
-      {/* <Container > */}
-
       <Navbar bg='light' expand='lg' fixed='top' sticky='top'>
         <Link href='/' passHref>
           <Navbar.Brand>INTENTION TEST PROJECT</Navbar.Brand>
@@ -27,13 +21,13 @@ const NavbarReact = () => {
               <Nav.Link>PROJECT-DEVELOPMENT</Nav.Link>
             </Link>
             <Link href='/bonnHbf' passHref>
-              <Nav.Link>BONN-HBF{refreshPage}</Nav.Link>
+              <Nav.Link>BONN-HBF</Nav.Link>
             </Link>
-            
+
+           
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      {/* </Container> */}
     </div>
   );
 };

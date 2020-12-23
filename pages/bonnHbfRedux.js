@@ -1,4 +1,4 @@
-import Page from './page';
+import Page from '../components/page';
 import { useSelector, useDispatch } from 'react-redux'
 
 import { gql, graphql } from 'react-apollo';

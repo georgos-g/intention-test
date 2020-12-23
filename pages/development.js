@@ -19,17 +19,15 @@ export default function Development() {
       <div>
         <Container>
           <Row>
-            <Col>
+            <Col md={12}>
               <div>
-                <h1>
-                  Responsive design is not about mobile. It’s not about tablets.
-                  It’s not about desktops. It’s about The Web!
-                </h1>
-                <p>Jeremy Keith</p>
+                <h1>„Wie stelle ich mir ein Website-Projekt vor?“</h1>
+
                 <style jsx>{`
-                   {
-                    margin: 20px;
-                    display: inline-block;
+                  h1 {
+                    margin-top: 60px;
+                    margin-bottom: 50px;
+                    text-align: center;
                   }
                 `}</style>
               </div>
@@ -42,8 +40,7 @@ export default function Development() {
               <div className=''>
                 <Image src={img1} rounded fluid></Image>
               </div>
-              {/* </Col>
-            <Col md={12} lg={6}> */}
+
               <div className='jumbotron'>
                 <h4>1. PROJEKTÜBERSICHT </h4>
                 <p className='lead'>
@@ -67,14 +64,12 @@ export default function Development() {
                 <p className='lead '>
                   <strong>Content First!</strong> Zuerst wird eine
                   Content-Inventur gemacht. Dabei wird deutlich, wo noch Inhalte
-                  erstellt werden müssen. Hier müssen die Ziele der Website, die
-                  Kundenziele, die Erwartungen und Bedürfnisse der Zielgruppe,
-                  wie auch die deren Nutzungsverhalten berücksichtigt werden. Im
-                  Rahmen des vorhandenen Contents ergeben sich
-                  Seiten-Strukturen, so dass die Navigation festgelegt werden
-                  kann. Dabei wird der Inhalt für den kleinstmöglichen Viewport
-                  erstellt/optimiert („Mobile First“) und dann für größere
-                  Geräte mit Inhalten und Funktionalitäten erweitert.
+                  erstellt werden müssen. Im Rahmen des vorhandenen Contents
+                  ergeben sich Seiten-Strukturen, so dass die Navigation
+                  festgelegt werden kann. Dabei wird der Inhalt für den
+                  kleinstmöglichen Viewport erstellt/optimiert („Mobile First“)
+                  und dann für größere Geräte mit Inhalten und Funktionalitäten
+                  erweitert.
                 </p>
               </div>
             </Col>
@@ -89,9 +84,10 @@ export default function Development() {
                   Im Rahmen der Inhaltsanalyse werden Wireframes erstellt. So
                   wird die Inhaltsstruktur der einzelnen Seiten erarbeitet, um
                   eine Grundlage für die Umsetzung zu bekommen. Bei Wireframes
-                  wird ermittelt welche Position der Content auf der Seite
-                  einnehmen sollen. Dabei wird für jeden, um die wichtigen
-                  Änderungen der Inhaltsdarstellung zu visualisieren.
+                  wird ermittelt welche Position die Contentelemente auf der
+                  Seite einnehmen sollen. Dabei wird für jeden wichtigen
+                  Breakpoint ein Wireframe erstellt, um die wichtigen Änderungen
+                  der Inhaltsdarstellung zu visualisieren.
                 </p>
               </div>
             </Col>
@@ -104,13 +100,10 @@ export default function Development() {
                 <h4>4. PROTOTYP</h4>
                 <p className='lead '>
                   Aufgrund des Wireframes kann der erste interaktive Klickdummy
-                  mit HTML und CSS erstellt werden. Der Prototyp verdeutlicht
-                  die Struktur, die Flexibilität und die Funktionalität der
-                  Website. Hier geht es erstmal darum, die Funktionalität und
-                  die Struktur der Website testen zu können. So können
-                  eventuelle Korrekturen schnell vorgenommen werden und haben
-                  keine Auswirkungen auf das Design, was doppelte Korrekturen
-                  vermeidet. Wenn der Prototyp in allen Testszenarien
+                  mit HTML/CSS erstellt werden. So kann die Funktionalität und
+                  die Struktur der Website getestet werden. Korrekturen können
+                  schnell vorgenommen werden und haben keine Auswirkungen auf
+                  das Design. Wenn der Prototyp in allen Testszenarien
                   zufriedenstellend läuft, kann das Design entwickelt werden.
                 </p>
               </div>
@@ -144,9 +137,9 @@ export default function Development() {
                   (manchmal beide Funktionen in Personalunion) ausgearbeitet. Es
                   wird in verschiedenen, festgelegten Browsern und Geräten
                   ausführlich getestet und optimiert. Design und Code werden
-                  parallel entwickelt. Der Prototyp durchläuft normalerweise
-                  diverse Korrekturschleifen. Der Prozess wiederholt sich so
-                  lange, bis die Website fertig ist.
+                  parallel entwickelt. Der Prototyp durchläuft diverse
+                  Korrekturschleifen. Der Prozess wiederholt sich so lange, bis
+                  die Website fertig ist.
                 </p>
               </div>
             </Col>
