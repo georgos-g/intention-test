@@ -1,0 +1,26 @@
+{
+  "name": "nextjs-redux-apollo",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.3.6",
+    "@zeit/next-css": "^1.0.1",
+    "apollo-boost": "^0.4.9",
+    "bootstrap": "^4.5.3",
+    "graphql": "^15.4.0",
+    "isomorphic-fetch": "^3.0.0",
+    "next": "latest",
+    "react": "^16.9.0",
+    "react-apollo": "^1.4.2",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "^16.9.0",
+    "react-redux": "^7.1.0",
+    "redux": "^3.6.0",
+    "redux-devtools-extension": "^2.13.2"
+  },
+  "license": "MIT"
+}
