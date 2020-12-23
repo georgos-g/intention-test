@@ -21,9 +21,10 @@ const query = gql`
     }
   }
 `;
-<Navbar/>
+
 const index = ({ data: { stationWithEvaId } }) => (
  <div className=''>
+<Navbar/>
    
     <h1>Bonn Hbf</h1>
     <ul>

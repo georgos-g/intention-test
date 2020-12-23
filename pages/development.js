@@ -1,9 +1,15 @@
 import Page from '../components/page';
-import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
+
+const img1 = 'https://source.unsplash.com/gcsNOsPEXfs/999x444';
+const img2 = 'https://source.unsplash.com/oC66vXsqnc8/999x444';
+const img3 = 'https://source.unsplash.com//jJT2r2n7lYA/999x444';
+const img4 = 'https://source.unsplash.com/066YnuYv8xw/999x444';
+const img5 = 'https://source.unsplash.com/BP3XOsSPlGA/999x444';
+const img6 = 'https://source.unsplash.com/4rmvT-RhRUw/999x444';
 
 export default function Development() {
   return (
@@ -11,16 +17,35 @@ export default function Development() {
       <Page />
 
       <div>
+        <Container>
+          <Row>
+            <Col>
+              <div>
+                <h1>
+                  Responsive design is not about mobile. It’s not about tablets.
+                  It’s not about desktops. It’s about The Web!
+                </h1>
+                <p>Jeremy Keith</p>
+                <style jsx>{`
+                   {
+                    margin: 20px;
+                    display: inline-block;
+                  }
+                `}</style>
+              </div>
+            </Col>
+          </Row>
+        </Container>
         <Container fluid>
           <Row>
-            <Col md={12} lg={6}>
-            <div className=''>
-              <Image src='https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=30'></Image>
-            </div>
-            </Col>
-            <Col md={12} lg={6}>
+            <Col sm={12} md={6} lg={6} xl={4}>
+              <div className=''>
+                <Image src={img1} rounded fluid></Image>
+              </div>
+              {/* </Col>
+            <Col md={12} lg={6}> */}
               <div className='jumbotron'>
-                <h3>1. PROJEKTÜBERSICHT </h3>
+                <h4>1. PROJEKTÜBERSICHT </h4>
                 <p className='lead'>
                   Zuerst sollten die Rahmenbedingungen des Projektes festgelegt
                   werden. Es ist vorteilhaft auch den Kunden mit ins Boot zu
@@ -32,10 +57,13 @@ export default function Development() {
                 </p>
               </div>
             </Col>
-            <Col md={12} lg={6}>
-              {' '}
+            <Col sm={12} md={6} lg={6} xl={4}>
+              <div className=''>
+                <Image src={img2} rounded fluid></Image>
+              </div>
+
               <div className='jumbotron'>
-                <h3>2. STRATEGIE / CONTENT </h3>
+                <h4>2. STRATEGIE / CONTENT </h4>
                 <p className='lead '>
                   <strong>Content First!</strong> Zuerst wird eine
                   Content-Inventur gemacht. Dabei wird deutlich, wo noch Inhalte
@@ -50,11 +78,13 @@ export default function Development() {
                 </p>
               </div>
             </Col>
-          </Row>
-          <Row>
-            <Col>
+
+            <Col sm={12} md={6} lg={6} xl={4}>
+              <div className=''>
+                <Image src={img3} rounded fluid></Image>
+              </div>
               <div className='jumbotron'>
-                <h3>3. WIREFRAMES / CONTENT CHOREOGRAFIE </h3>
+                <h4>3. WIREFRAMES</h4>
                 <p className='lead '>
                   Im Rahmen der Inhaltsanalyse werden Wireframes erstellt. So
                   wird die Inhaltsstruktur der einzelnen Seiten erarbeitet, um
@@ -66,9 +96,12 @@ export default function Development() {
               </div>
             </Col>
 
-            <Col>
+            <Col sm={12} md={6} lg={6} xl={4}>
+              <div className=''>
+                <Image src={img4} rounded fluid></Image>
+              </div>
               <div className='jumbotron'>
-                <h3>4. PROTOTYP</h3>
+                <h4>4. PROTOTYP</h4>
                 <p className='lead '>
                   Aufgrund des Wireframes kann der erste interaktive Klickdummy
                   mit HTML und CSS erstellt werden. Der Prototyp verdeutlicht
@@ -82,11 +115,13 @@ export default function Development() {
                 </p>
               </div>
             </Col>
-          </Row>
-          <Row>
-            <Col>
+
+            <Col sm={12} md={6} lg={6} xl={4}>
+              <div className=''>
+                <Image src={img5} rounded fluid></Image>
+              </div>
               <div className='jumbotron'>
-                <h3>5. DESIGN ERARBEITEN</h3>
+                <h4>5. DESIGN ERARBEITEN</h4>
                 <p className='lead '>
                   Designer*innen erstellen Moodboards oder Style Tiles. Die
                   dienen dazu, die optische Richtung und die gewünschte Wirkung
@@ -98,9 +133,12 @@ export default function Development() {
                 </p>
               </div>
             </Col>
-            <Col>
+            <Col sm={12} md={6} lg={6} xl={4}>
+              <div className=''>
+                <Image src={img6} rounded fluid></Image>
+              </div>
               <div className='jumbotron'>
-                <h3>6. TESTEN / ENTWICKELN</h3>
+                <h4>6. TESTEN / ENTWICKELN</h4>
                 <p className='lead '>
                   Der Prototyp wird von den Entwickler*innen und Designer*innen
                   (manchmal beide Funktionen in Personalunion) ausgearbeitet. Es
@@ -114,43 +152,6 @@ export default function Development() {
             </Col>
           </Row>
         </Container>
-      </div>
-
-      <div className='jumbotron'>
-        <Card style={{}}>
-          <Card.Img
-            variant='top'
-            src='https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=30'
-          />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      </div>
-
-      <div className=''>
-        <Card>
-          <Card.Img
-            variant='top'
-            src='https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=30'
-          />
-          <Card.Body>
-            <Card.Title>1.PROJEKTÜBERSICHT </Card.Title>
-            <Card.Text>
-              Zuerst sollten die Rahmenbedingungen des Projektes festgelegt
-              werden. Es ist vorteilhaft auch den Kunden mit ins Boot zu holen.
-              So kann man den Ablauf erklären und verdeutlichen, wie sich Design
-              und die technische Umsetzung gemeinsam entwickeln. <br /> So
-              bekommen die Kunden einen Eindruck über den Aufwand für die
-              Erstellung eines Web-Projekts (beim Auftragnehmer und insbesondere
-              bei sich).
-            </Card.Text>
-          </Card.Body>
-        </Card>
       </div>
     </>
   );

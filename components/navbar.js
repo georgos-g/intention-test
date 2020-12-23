@@ -29,9 +29,7 @@ const NavbarReact = () => {
             <Link href='/bonnHbf' passHref>
               <Nav.Link>BONN-HBF{refreshPage}</Nav.Link>
             </Link>
-            <Link href='/trainStation' passHref>
-              <Nav.Link>BONN-Reload</Nav.Link>
-            </Link>
+            
           </Nav>
         </Navbar.Collapse>
       </Navbar>

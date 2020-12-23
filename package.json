@@ -22,5 +22,9 @@
     "redux": "^3.6.0",
     "redux-devtools-extension": "^2.13.2"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^5.0.1",
+    "style-loader": "^2.0.0"
+  }
 }
