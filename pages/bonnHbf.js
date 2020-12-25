@@ -1,5 +1,6 @@
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 
+
 import Page from '../components/page';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
