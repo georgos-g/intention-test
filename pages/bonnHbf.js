@@ -1,74 +1,75 @@
+import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
+
 import Page from '../components/page';
-import { gql, graphql } from 'react-apollo';
-import withData from '../apollo/withData';
-import NavbarReact from '../components/navbar';
-
-
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 
-const query = gql`
-  {
-    stationWithEvaId(evaId: 8000044) {
-      stationNumber
-      name
-      location {
-        latitude
-        longitude
+export default function BonnHbf({ stationWithEvaId }) {
+  return (
+    <>
+      <Page />
+      <div>
+        <Container>
+          <Row>
+            <Col>
+              <ul className='jumbotron'>
+                <h2>{JSON.stringify(stationWithEvaId.name)}</h2>
+                <li>Latitude: {stationWithEvaId.location.latitude}</li>
+                <li>Longitude: {stationWithEvaId.location.longitude}</li>
+                <li>Station Nr.: {stationWithEvaId.stationNumber}</li>
+              </ul>
+            </Col>
+          </Row>
+
+          <Image src={stationWithEvaId.picture.url} rounded fluid></Image>
+        </Container>
+
+        <style jsx>{`
+          h2 {
+            // margin-top: 40px;
+            // margin-bottom: 10px;
+            text-align: center;
+          }
+
+          li {
+            list-style: none;
+            text-align: center;
+          }
+        `}</style>
+      </div>
+    </>
+  );
+}
+
+export async function getStaticProps() {
+  const client = new ApolloClient({
+    uri: 'https://bahnql.herokuapp.com/graphql',
+    cache: new InMemoryCache(),
+  });
+
+  const { data } = await client.query({
+    query: gql`
+      {
+        stationWithEvaId(evaId: 8000044) {
+          stationNumber
+          name
+          location {
+            latitude
+            longitude
+          }
+          picture {
+            url
+          }
+        }
       }
-      picture {
-        url
-      }
-    }
-  }
-`;
+    `,
+  });
 
-
-const index = ({ data: { stationWithEvaId } }) => (
-  <div >
-    <Container>
-
-    
-    <h1>BONN HBF</h1>
-    <ul>
-      {/* <li>Name: {JSON.stringify(stationWithEvaId.name)}</li> */}
-
-      <li>Latitude: {stationWithEvaId.location.latitude}</li>
-      <li>Longitude: {stationWithEvaId.location.longitude}</li>
-      <li>Station Nr.: {stationWithEvaId.stationNumber}</li>
-      <img src={stationWithEvaId.picture.url}></img>
-    </ul></Container>
-
-    <style jsx>{`
-                  h1 {
-                    margin-top: 50px;
-                    margin-bottom: 30px;
-                    text-align: center;
-                  }
-                  img {
-                    display: block;
-                    margin-top:30px;
-                    margin-left: auto;
-                    margin-right: auto;
-                    width: 100%;
-                  }
-                
-                  li {
-
-                    text-align: center;
-                    list-style: none;
-                    
-                  }
-
-
-                `}</style>
-
-
- 
-  </div>
-);
-
-const GraphqlIndex = graphql(query)(index);
-export default withData(GraphqlIndex);
+  return {
+    props: {
+      stationWithEvaId: data.stationWithEvaId,
+    },
+  };
+}
