@@ -9,7 +9,7 @@ const img2 = 'https://source.unsplash.com/oC66vXsqnc8/999x444';
 const img3 = 'https://source.unsplash.com//jJT2r2n7lYA/999x444';
 const img4 = 'https://source.unsplash.com/066YnuYv8xw/999x444';
 const img5 = 'https://source.unsplash.com/BP3XOsSPlGA/999x444';
-const img6 = 'https://source.unsplash.com/4rmvT-RhRUw/999x444';
+const img6 = 'https://source.unsplash.com/40k6ZqbsXuo/999x444';
 
 export default function Development() {
   return (
@@ -22,14 +22,6 @@ export default function Development() {
             <Col md={12}>
               <div>
                 <h1>„Wie stelle ich mir ein Website-Projekt vor?“</h1>
-
-                <style jsx>{`
-                  h1 {
-                    margin-top: 60px;
-                    margin-bottom: 50px;
-                    text-align: center;
-                  }
-                `}</style>
               </div>
             </Col>
           </Row>
@@ -43,7 +35,7 @@ export default function Development() {
 
               <div className='jumbotron'>
                 <h4>1. PROJEKTÜBERSICHT </h4>
-                <p className='lead'>
+                <p className='lead '>
                   Zuerst sollten die Rahmenbedingungen des Projektes festgelegt
                   werden. Es ist vorteilhaft auch den Kunden mit ins Boot zu
                   holen. So kann man den Ablauf erklären und verdeutlichen, wie
@@ -145,6 +137,76 @@ export default function Development() {
             </Col>
           </Row>
         </Container>
+        <style jsx>{`
+          h1 {
+            margin-top: 60px;
+            margin-bottom: 50px;
+            text-align: center;
+          }
+          h4 {
+            padding-bottom: 20px;
+          }
+          .jumbotron {
+            padding: 20px;
+            margin-top: 4px;
+            height: 400px;
+          }
+          @media only screen and (max-width: 1500px) {
+            .jumbotron {
+              height: 450px;
+            }
+          }
+          @media only screen and (max-width: 1278px) {
+            .jumbotron {
+              height: 500px;
+            }
+          }
+          @media only screen and (max-width: 1199px) {
+            .jumbotron {
+              height: 350px;
+            }
+          }
+          @media only screen and (max-width: 1180px) {
+            .jumbotron {
+              height: 370px;
+            }
+          }
+          @media only screen and (max-width: 1170px) {
+            .jumbotron {
+              height: 390px;
+            }
+          }
+          @media only screen and (max-width: 980px) {
+            .jumbotron {
+              height: 410px;
+            }
+          }
+          @media only screen and (max-width: 930px) {
+            .jumbotron {
+              height: 440px;
+            }
+          }
+          @media only screen and (max-width: 880px) {
+            .jumbotron {
+              height: 460px;
+            }
+          }
+          @media only screen and (max-width: 816px) {
+            .jumbotron {
+              height: 480px;
+            }
+          }
+          @media only screen and (max-width: 780px) {
+            .jumbotron {
+              height: 500px;
+            }
+          }
+          @media only screen and (max-width: 767px) {
+            .jumbotron {
+              height: auto;
+            }
+          }
+        `}</style>
       </div>
     </>
   );
